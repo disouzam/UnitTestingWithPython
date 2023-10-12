@@ -5,10 +5,12 @@ def fizzBuzz(value):
     return str(value)
 
 # Tests
+def checkFizzBuzz(value, expectRetVal):
+    retVal = fizzBuzz(value)
+    assert retVal == expectRetVal
+
 def test_return1With1PassedIn():
-    retVal = fizzBuzz(1)
-    assert retVal == "1"
+    checkFizzBuzz(1, "1")
 
 def test_returns2With2Passedod():
-    retVal = fizzBuzz(2)
-    assert retVal == "2"
+    checkFizzBuzz(2, "2")
