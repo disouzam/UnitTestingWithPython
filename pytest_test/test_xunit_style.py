@@ -1,6 +1,14 @@
 import inspect
 
 
+def setup_module(module):
+    print("Setup Module!")
+
+
+def teardown_module(module):
+    print("Teardown Module!")
+
+
 def setup_function(function):
     function_name = function.__name__
     if function_name == "test1":
