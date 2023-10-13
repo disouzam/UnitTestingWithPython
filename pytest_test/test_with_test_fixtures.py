@@ -6,7 +6,7 @@ def setup():
     print("\nSetup method")
 
 
-def test1():
+def test1(setup):
     print("\nExecuting test1!")
     assert True
 
