@@ -1,7 +1,9 @@
 import pytest
 
+paramVariable = [1, 2, 3]
 
-@pytest.fixture(params=[1, 2, 3])
+
+@pytest.fixture(params=paramVariable)
 def setup(request):
     retVal = request.param
     print("\nSetup! retVale = {}".format(retVal))
