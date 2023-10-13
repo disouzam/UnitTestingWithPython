@@ -2,21 +2,23 @@ import inspect
 
 
 def setup_function(function):
-    if function == test1:
+    function_name = function.__name__
+    if function_name == "test1":
         print("\nSetting up test1!")
-    elif function == test2:
+    if function_name == "test1":
         print("\nSetting up test2!")
     else:
-        print("\nSetting up test2!")
+        print("\nSetting up unknown test!")
 
 
 def teardown_function(function):
-    if function == test1:
+    function_name = function.__name__
+    if function_name == "test1":
         print("\nTearing down test1!")
-    elif function == test2:
+    if function_name == "test1":
         print("\nTearing down test2!")
     else:
-        print("\nTearing down test2!")
+        print("\nTearing down unknown test!")
 
 
 def test1():
