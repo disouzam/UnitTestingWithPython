@@ -15,9 +15,10 @@ def teardown_function(function):
         print("\nTearing down test2!")
 
 def test1():
-    print("Executing test1!")
+    print("Executing " + (inspect.currentframe()).f_code.co_name + "!")
     assert True
 
+
 def test2():
-    print("Executing test2!")
+    print("Executing " + (inspect.currentframe()).f_code.co_name + "!")
     assert True
