@@ -34,7 +34,7 @@ def test_canAddDiscountRule(checkout):
     checkout.addDiscount("a", 3, 2)
 
 def test_canApplyDiscountRule(checkout):
-    checkout.addItem("a", 3, 2)
+    checkout.addDiscount("a", 3, 2)
     checkout.addItem("a")
     checkout.addItem("a")
     checkout.addItem("a")

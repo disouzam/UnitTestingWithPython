@@ -35,5 +35,6 @@ class Checkout:
                     total += remaining * self.prices[item]
                 else:
                     total += self.prices[item] * cnt
-            total += self.prices[item] *cnt
+            else:
+                total += self.prices[item] *cnt
         return total
