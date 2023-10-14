@@ -11,13 +11,15 @@ class Checkout:
         self.items = {}
 
     def addDiscount(self, item, nbrOfItems, price):
-        discount =self.Discount(nbrOfItems, price)
+        discount = self.Discount(nbrOfItems, price)
         self.discounts[item] = discount
 
     def addItemPrice(self, item, price):
         self.prices[item] = price
 
     def addItem(self, item):
+        if item not in self.prices:
+            raise Exception("Bad Item")
         if item in self.items:
             self.items[item] += 1
         else:
@@ -36,5 +38,5 @@ class Checkout:
                 else:
                     total += self.prices[item] * cnt
             else:
-                total += self.prices[item] *cnt
+                total += self.prices[item] * cnt
         return total
